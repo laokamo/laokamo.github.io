@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Head First Java读书笔记(一)——基本概念 · 弯仔码头</title>
+    <title>Head First Java读书笔记(四)——方法操作实例变量 · 弯仔码头</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">弯仔码头</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Head First Java读书笔记(一)——基本概念</a>
+                <a href="#" class="post-name">Head First Java读书笔记(四)——方法操作实例变量</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Head First Java读书笔记(一)——基本概念
+            Head First Java读书笔记(四)——方法操作实例变量
             <!-- 404 -->
             
         </h1>
@@ -268,18 +268,18 @@ height:50vh;
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">269</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">184</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2014/03/22</span>
+                    <span class="post-intro-time">2014/03/30</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,58 +403,55 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>前天，Java编程思想和Head First Java终于拿到手上了，真重！<br>仔细想想，毕业后好像再也没有看过什么书了，下班后就玩玩游戏，看看电影，时间过得很快，但是脑子里就觉得缺少了什么东西，有一种漫无目的的感觉。</p>
-<hr>
-<ul>
-<li><p>write-once / run-anywhere(一次编写、到处执行)</p>
+        <ul>
+<li><p>类是对象的蓝图</p>
 </li>
-<li><p>Java的工作方式</p>
+<li><p>方法会运用形参，调用的一方会传入实参</p>
 </li>
 </ul>
 <blockquote>
-<p>源代码-&gt;编译器-&gt;字节码-&gt;Java虚拟机(JVM)</p>
+<p>实参是传给方法的值。当它传入方法后就成了形参。</p>
 </blockquote>
 <ul>
-<li>我要做的事情</li>
+<li>方法可以有返回值</li>
 </ul>
 <blockquote>
-<p>编写源代码(*.java) -&gt; javac编译源代码 -&gt; 产生.class字节码文件 -&gt; java 启动虚拟机执行</p>
+<p>void类型，代表并没有返回任何东西</p>
 </blockquote>
 <ul>
-<li><p>Java的程序结构</p>
+<li><p>Java是通过值传递的，也就是说通过拷贝传递</p>
+</li>
+<li><p>实例变量永远都会有默认值</p>
+</li>
+<li><p>实例变量与局部变量的差别</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>区别</th>
+<th style="text-align:center">实例变量</th>
+<th style="text-align:right">局部变量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>声明处</td>
+<td style="text-align:center">类中</td>
+<td style="text-align:right">方法中</td>
+</tr>
+<tr>
+<td>初始化</td>
+<td style="text-align:center">有默认值</td>
+<td style="text-align:right">无默认值</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><p>什么是源文件？</p>
-<blockquote>
-<p>源文件(扩展名为.java)带有类的定义</p>
-</blockquote>
-</li>
-<li><p>什么是类？</p>
-<blockquote>
-<p>类用来表示程序的一个组件</p>
-</blockquote>
-</li>
-<li><p>什么是方法？</p>
-<blockquote>
-<p>类似于函数</p>
-</blockquote>
-<blockquote>
-<p>类存在于原文件里面<br>方法存在于类中<br>语句存在于方法中</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>&#123; <span class="comment">//类</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">bark</span><span class="params">()</span></span>&#123;<span class="comment">//方法</span></span><br><span class="line">        doSomething;<span class="comment">//语句</span></span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>循环</p>
-</li>
+<li>==和equals()</li>
 </ul>
 <blockquote>
-<p>while循环、do-while循环、for循环</p>
-</blockquote>
-<ul>
-<li>比较运算符</li>
-</ul>
-<blockquote>
-<p>&lt;（小于）、&gt; (大于) 、== (等于)</p>
+<p>==用来比较基本数据类型，或者判断两个引用是否引用同一个对象<br>equals()用来判断两个对象是否在意义上相等</p>
 </blockquote>
 
     </article>
@@ -462,9 +459,9 @@ height:50vh;
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">laokamo</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2014/03/22/Head-First-Java读书笔记-一-——基本概念/">http://yoursite.com/2014/03/22/Head-First-Java读书笔记-一-——基本概念/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2014/03/22/Head-First-Java读书笔记-一-——基本概念/">March 22nd 2014, 2:24:20 pm</a>
-            <!-- <p>更新日期：<a href="http://yoursite.com/2014/03/22/Head-First-Java读书笔记-一-——基本概念/">February 22nd 2019, 3:29:25 pm</a> -->
+            </p><p>原文链接：<a href="http://yoursite.com/2014/03/30/Head-First-Java读书笔记-四-——方法操作实例变量/">http://yoursite.com/2014/03/30/Head-First-Java读书笔记-四-——方法操作实例变量/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2014/03/30/Head-First-Java读书笔记-四-——方法操作实例变量/">March 30th 2014, 8:57:06 pm</a>
+            <!-- <p>更新日期：<a href="http://yoursite.com/2014/03/30/Head-First-Java读书笔记-四-——方法操作实例变量/">February 22nd 2019, 3:59:09 pm</a> -->
             <!-- <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </p></div>
     
@@ -472,17 +469,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2014/03/23/Head-First-Java读书笔记-二-——类与对象/" title="Head First Java读书笔记(二)——类与对象">
-                    <div class="nextTitle">Head First Java读书笔记(二)——类与对象</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2014/03/19/Java-IDE安装/" title="Java IDE安装">
-                    <div class="prevTitle">Java IDE安装</div>
+                <a href="/2014/03/29/Head-First-Java读书笔记-三-——primitive主数据类型和引用/" title="Head First Java读书笔记(三)——primitive主数据类型和引用">
+                    <div class="prevTitle">Head First Java读书笔记(三)——primitive主数据类型和引用</div>
                 </a>
             
         </li>
