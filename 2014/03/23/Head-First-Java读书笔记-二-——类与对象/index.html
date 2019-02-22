@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Java IDE安装 · 弯仔码头</title>
+    <title>Head First Java读书笔记(二)——类与对象 · 弯仔码头</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">弯仔码头</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Java IDE安装</a>
+                <a href="#" class="post-name">Head First Java读书笔记(二)——类与对象</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Java IDE安装
+            Head First Java读书笔记(二)——类与对象
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,20 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="IDE">IDE</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">116</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">197</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2014/03/19</span>
+                    <span class="post-intro-time">2014/03/23</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,35 +403,35 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>百度了一下,Java的开发工具有几款热门的，比如Eclipse、IntelliJ IDEA，那就都试试看吧，反正都没用过～</p>
-<p>那我就用IntelliJ IDEA，比较好看！</p>
-<ul>
-<li><p>下载</p>
-<blockquote>
-<p><a href="https://www.jetbrains.com/idea/download/#section=linux" target="_blank" rel="noopener">从官网下载最新的安装包</a></p>
-</blockquote>
-</li>
-<li><p>解压</p>
-<blockquote>
-<p>解压到/opt下 sudo tar -zxvf ideaIU-11.1.5d.tar.gz -C /opt</p>
-</blockquote>
-</li>
-<li><p>运行</p>
-<blockquote>
-<p>解压后进入bin目录下<br>在终端中输入 <code>./idea.sh</code> 就启动了</p>
-</blockquote>
-</li>
+        <ul>
+<li>类是对象的蓝图</li>
 </ul>
-<p>OK,接下来正式要进入Java这个围城了！晚安</p>
+<blockquote>
+<p>它会告诉虚拟机如何创造某个类型的对象。</p>
+</blockquote>
+<ul>
+<li>对象是靠类的模型塑造出来的</li>
+</ul>
+<blockquote>
+<p>对象本身已知的事物成为实例变量 (instance variable)，它代表对象的状态，且该类型的每一个对象都会独立的拥有一份该类型的值；<br>对象可以执行的动作成为方法 (methods)</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>&#123;</span><br><span class="line">    <span class="comment">//实例变量</span></span><br><span class="line">    <span class="keyword">int</span> size;</span><br><span class="line">    String breed;</span><br><span class="line">    String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//方法</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">bark</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"汪汪"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DogTestDrive</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Dog d = <span class="keyword">new</span> Dog();<span class="comment">//建立Dog对象</span></span><br><span class="line">        d.size = <span class="number">40</span>;<span class="comment">//存取该对象的变量</span></span><br><span class="line">        d.bark();<span class="comment">//调用方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>全局变量</li>
+</ul>
+<blockquote>
+<p>Java的面向对象概念中并没有全局变量这回事<br>public static 全局方法<br>public static final 常量</p>
+</blockquote>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">laokamo</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2014/03/19/Java-IDE安装/">http://yoursite.com/2014/03/19/Java-IDE安装/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2014/03/19/Java-IDE安装/">March 19th 2014, 9:16:22 pm</a>
-            <!-- <p>更新日期：<a href="http://yoursite.com/2014/03/19/Java-IDE安装/">February 22nd 2019, 3:24:31 pm</a> -->
+            </p><p>原文链接：<a href="http://yoursite.com/2014/03/23/Head-First-Java读书笔记-二-——类与对象/">http://yoursite.com/2014/03/23/Head-First-Java读书笔记-二-——类与对象/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2014/03/23/Head-First-Java读书笔记-二-——类与对象/">March 23rd 2014, 9:49:07 am</a>
+            <!-- <p>更新日期：<a href="http://yoursite.com/2014/03/23/Head-First-Java读书笔记-二-——类与对象/">February 22nd 2019, 3:51:27 pm</a> -->
             <!-- <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </p></div>
     
@@ -439,17 +439,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2014/03/22/Head-First-Java读书笔记-一-——基本概念/" title="Head First Java读书笔记(一)——基本概念">
-                    <div class="nextTitle">Head First Java读书笔记(一)——基本概念</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2014/03/19/Ubuntu下配置Java环境/" title="Ubuntu下配置Java环境">
-                    <div class="prevTitle">Ubuntu下配置Java环境</div>
+                <a href="/2014/03/22/Head-First-Java读书笔记-一-——基本概念/" title="Head First Java读书笔记(一)——基本概念">
+                    <div class="prevTitle">Head First Java读书笔记(一)——基本概念</div>
                 </a>
             
         </li>
