@@ -346,19 +346,32 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/02/22/Nginx出现413-Request-Entity-Too-Large错误解决方法/">
+        <a class="abstract-title" href="/2016/10/21/Nginx出现413-Request-Entity-Too-Large错误解决方法/">
             
                 <span>Nginx出现413 Request Entity Too Large错误解决方法</span>
         </a>
         <div class="abstract-content">
             
+最近公司有一个CMS项目，上传应用APK包时，小于1M的文件上传没问题，大于1M的文件会提示413 Request Entity Too Large错误。
+
+一顿百度后发现，原来是Nginx限制了上传文件的大小(默认为1M)，在nginx中可以配置最大允许的文件大小
+查看nginx文档
+123Syntax:client_max_body_size size;Default:client_max_body_size 1m;Context: http, server, location
+
+Sets the maximum allowed size of the client request...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/22</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/10/21</span>
             </div>
             <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Nginx">Nginx</a>
+    
+</div>
             
         </div>
     </article>
@@ -1217,12 +1230,12 @@ double
     
     
     
-    <div class="archive-year"> 2019 </div>
+    <div class="archive-year"> 2016 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/22</span><a class="archive-post-title" href="/2019/02/22/Nginx出现413-Request-Entity-Too-Large错误解决方法/">Nginx出现413 Request Entity Too Large错误解决方法</a>
+            <span class="archive-post-date">10/21</span><a class="archive-post-title" href="/2016/10/21/Nginx出现413-Request-Entity-Too-Large错误解决方法/">Nginx出现413 Request Entity Too Large错误解决方法</a>
         </li>
     
     
@@ -1327,6 +1340,8 @@ double
         <span class="sidebar-tag-name" data-tags="Ubuntu"><span class="iconfont-archer">&#xe606;</span>Ubuntu</span>
     
         <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
+    
+        <span class="sidebar-tag-name" data-tags="Nginx"><span class="iconfont-archer">&#xe606;</span>Nginx</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
