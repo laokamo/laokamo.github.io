@@ -274,7 +274,7 @@ height:35vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">0</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">353</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -403,7 +403,25 @@ height:35vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <ul>
+<li>服务器与客户端通过socket连接来沟通。  </li>
+<li>当ServerSocket接收到请求时，会在另外的一个端口做一个socket连接来处理客户端的请求。</li>
+<li>线程代表独立的执行空间。</li>
+<li>多线程同时执行时，实际上是多个线程随机轮流执行的。</li>
+<li>线程进入可执行状态时，会在执行中和可执行这两种状态中切换。但是也可能进入堵塞状态。堵塞状态可能是闲置、等待其他县城完成、等待串流数据、等待被占用的对象等原因引起的。</li>
+<li><p>构造线程时需要传入一个任务对象，这个任务对象需要实现Runnable接口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.建立线程任务</span></span><br><span class="line">Runnable threadJob = <span class="keyword">new</span> MyRunnable();</span><br><span class="line"><span class="comment">//2.建立Thread对象(执行人员)并赋值Runable(任务)</span></span><br><span class="line">Thread myThread = <span class="keyword">new</span> Thread(threadJob);</span><br><span class="line"><span class="comment">//3.启动任务</span></span><br><span class="line">myThread.start();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>并发：不同线程对同一个对象同时进行处理，可能引起问题。</p>
+</li>
+<li>锁(synchronized)<blockquote>
+<p>要让对象在线程上有足够的安全性，就要对不可分割执行的指令上锁（同步化）。</p>
+</blockquote>
+</li>
+<li>如果线程尝试进入同步化的方法，必须取得对象的钥匙如果钥匙被别的线程拿走了，线程只能等待。</li>
+<li>如果两个线程互相持有对方正在等待执行的方法的钥匙，就会发生死锁。</li>
+</ul>
+
     </article>
     <!-- license  -->
     
@@ -411,7 +429,7 @@ height:35vh;
             <p>原文作者：<a href="http://yoursite.com">laokamo</a>
             </p><p>原文链接：<a href="http://yoursite.com/2014/05/31/Head-First-Java读书笔记-十三-——网络与线程/">http://yoursite.com/2014/05/31/Head-First-Java读书笔记-十三-——网络与线程/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2014/05/31/Head-First-Java读书笔记-十三-——网络与线程/">May 31st 2014, 1:38:21 pm</a>
-            <!-- <p>更新日期：<a href="http://yoursite.com/2014/05/31/Head-First-Java读书笔记-十三-——网络与线程/">February 23rd 2019, 1:29:08 pm</a> -->
+            <!-- <p>更新日期：<a href="http://yoursite.com/2014/05/31/Head-First-Java读书笔记-十三-——网络与线程/">February 24th 2019, 8:06:50 pm</a> -->
             <!-- <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </p></div>
     

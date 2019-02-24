@@ -352,6 +352,13 @@
         </a>
         <div class="abstract-content">
             
+服务器与客户端通过socket连接来沟通。  
+当ServerSocket接收到请求时，会在另外的一个端口做一个socket连接来处理客户端的请求。
+线程代表独立的执行空间。
+多线程同时执行时，实际上是多个线程随机轮流执行的。
+线程进入可执行状态时，会在执行中和可执行这两种状态中切换。但是也可能进入堵塞状态。堵塞状态可能是闲置、等待其他县城完成、等待串流数据、等待被占用的对象等原因引起的。
+构造线程时需要传入一个任务对象，这个任务对象需要实现Runnable接口。
+123456//1.建立线程任务Runnable threadJob = new MyRunnable();//2.建立T...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
