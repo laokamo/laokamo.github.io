@@ -78,8 +78,6 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -203,8 +201,10 @@
 </head>
 
     
+        <body class="home-body">
     
-<header class="header">
+    
+<header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -220,21 +220,34 @@
 
 
 
+
+height:35vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/wind.png)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            弯仔码头
+            <!-- 文章页  -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            
+            
+                每天多学习一点 生活更美好一些
+            
+            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -346,481 +359,30 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2014/06/08/Head-First-Java读书笔记-十四-——集合与泛型/">
+        <a class="abstract-title" href="/2014/03/15/我的第一篇博客/">
             
-                <span>Head First Java读书笔记(十四)——集合与泛型</span>
+                <span>我的第一篇博客</span>
         </a>
         <div class="abstract-content">
-            
-常见的集合类型，有序的集合中的元素必须是可比较的，Comparable的：
+            Hello World!!!!
+如同婴儿的第一声啼哭，奈斯！
+航海专业的我毕业3年多了，在船上也漂泊了近2年，每次伴随着发动机的震动声入眠时，都在心里默默的问自己，这是我想要的生活吗？
+不！
+所以我顶住了家人的压力，毅然决然的离开了那艘钢铁般的监狱，准备向程序员这条道路前行。
+在此我要警醒自己，多读书、多看报、少吃零食、多碎觉！
+加油！
 
-
-TreeSet：有序且防止重复的集合。HashMap：Key-Value集合，Key不可重复HashSet：防止重复的集合，可快速找到相符元素LinkedList：针对经常插入或者删除中间元素所涉及的高效率集合（不如ArrayList实用）LinkedHashMap：可记住元素插入顺序，可设定依照原宿上次存储先后来排序的HashMap。ArrayList中的sort()方法，可进行已实现了Comparable接口的类的排序，也可以使用实现了Comparator接口的内部类来进行排序。123456789101...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/06/08</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/03/15</span>
             </div>
             <!-- tags  -->
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2014/05/31/Head-First-Java读书笔记-十三-——网络与线程/">
-            
-                <span>Head First Java读书笔记(十三)——网络与线程</span>
-        </a>
-        <div class="abstract-content">
-            
-服务器与客户端通过socket连接来沟通。  
-当ServerSocket接收到请求时，会在另外的一个端口做一个socket连接来处理客户端的请求。
-线程代表独立的执行空间。
-多线程同时执行时，实际上是多个线程随机轮流执行的。
-线程进入可执行状态时，会在执行中和可执行这两种状态中切换。但是也可能进入堵塞状态。堵塞状态可能是闲置、等待其他县城完成、等待串流数据、等待被占用的对象等原因引起的。
-构造线程时需要传入一个任务对象，这个任务对象需要实现Runnable接口。
-123456//1.建立线程任务Runnable threadJob = new MyRunnable();//2.建立T...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/05/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2014/05/03/Head-First-Java读书笔记-十二-——序列化和文件的输入-输出/">
-            
-                <span>Head First Java读书笔记(十二)——序列化和文件的输入/输出</span>
-        </a>
-        <div class="abstract-content">
-            
-将序列化对象写入文件12345678//创建出FileOutputStreamFileOutputStream fileStream = new FileOutputStream("MyGame.ser");//创建ObjectOutputStreamObjectOutputStream os = new ObjectOutputStream(fileStream);//写入对象os.writeObject(characterOne);//关闭os.close();
-
-
-
-当对象被序列化时，被该对象引用的实例变量也会被序列化
-
-
-Serializable
-
-Serializable接口...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/05/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2014/04/27/Head-First-Java读书笔记-十一-——异常处理/">
-            
-                <span>Head First Java读书笔记(十一)——异常处理</span>
-        </a>
-        <div class="abstract-content">
-            
-调用有风险的方法时会发生什么？
-
-1.假设你调用了一个不是自己写的方法；2.该方法执行某些风险的任务，可能会在运行期间出状况；3.你必须认识到该方法的风险；4.你得写出可以在发生状况时加以处理的程序代码，未雨绸缪！
-
-
-thorws
-声明在方法上
-
-
-throw
-声明在catch中
-
-
-try/catch12345try&#123;    //危险动作&#125;catch(Exception ex)&#123;    //尝试恢复&#125;
-
-
-
-异常时一种Exception类型的对象
-
-
-编译器会核对每件事，除了RuntimeExceptions 编译器所关心的时称为检查异常的异...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/04/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2014/04/26/Head-First-Java读书笔记-十-——数字和静态/">
-            
-                <span>Head First Java读书笔记(十)——数字和静态</span>
-        </a>
-        <div class="abstract-content">
-            
-静态方法
-
-一种不依靠实例变量也不需要对象的行为  例如: Math.min(88,86)静态的方法不能调用非静态的变量，因为静态的方法是通过类名来调用，所以静态的方法无法引用到该类的任何实例变量静态方法不能调用非静态的方法
-
-
-静态变量
-
-它的值对所有的实例来说都是相同的同一类所有的实例共享一份静态变量静态变量会在该类的任何静态方法执行之前就初始化
-
-
-
-
-实例变量：每个实例一份静态变量：每个类一份
-
-
-final关键字
-
-final变量代表你不能改变它的值final方法代表你不能覆盖掉该方法final的类代表你不能集成该类(也就是创建它的子类)
-
-
-常量
-
-一个被标记为final的...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/04/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2014/04/20/Head-First-Java读书笔记-九-——构造器与垃圾收集器/">
-            
-                <span>Head First Java读书笔记(九)——构造器与垃圾收集器</span>
-        </a>
-        <div class="abstract-content">
-            
-注意：内容含有死亡成份，12岁一下儿童需有家长陪同观赏对象有生死
-
-
-栈(Stack)
-
-
-方法调用和局部变量
-
-
-堆(Heap)
-
-
-所有的对象
-
-
-实例变量
-
-
-实例变量是被声明在类里而不是方法里面。它们代表每一个独立对象的’字段’。实例变量存在于所属的对象中。
-
-
-局部变量
-
-
-局部变量和方法的参数都是被声明在方法中。它们是暂时的，且声明周期只限于方法被放在栈上的的这段期间。
-
-
-当调用一个方法时，该方法会放在调用栈的栈顶，实际被堆上栈的是堆栈块，它带有方法的状态，包括执行到哪一行程序以及所有的局部变量的值。
-
-
-对象引用变量与基本数据类型都放在栈上。不管是实例变量或者局部变量，...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/04/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2014/04/19/Head-First-Java读书笔记-八-——接口与抽象类/">
-            
-                <span>Head First Java读书笔记(八)——接口与抽象类</span>
-        </a>
-        <div class="abstract-content">
-            
-接口(interface)
-
-
-100%纯抽象类
-
-
-抽象类(abstract)
-
-
-无法初始化的类没人能够创建出该类的实例
-
-
-抽象方法
-
-
-抽象方法没有实体不能在非抽象类中拥有抽象方法，反之可以
-
-
-在Java中的所有类都是从Object这个类继承出来的
-
-
-Object里有什么？
-
-12345678910class Object&#123;    //对象是否 '相等'    equals(Object o)    //告诉你此对象是从哪里被初始化的    Class getClass()    //对象的哈希码    int hashCode()    //类名@hashcod...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/04/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2014/04/12/Head-First-Java读书笔记-七-——继承和多态/">
-            
-                <span>Head First Java读书笔记(七)——集成和多态</span>
-        </a>
-        <div class="abstract-content">
-            规划程序时要规划未来
-继承 extends
-当一个类继承自另外一个类时，就说 子类继承父类若你想知道某物是否应该继承另一物时，可以用 IS-A来检测，IS-A是单向的例如：三角形是一个多边形
-
-
-
-
-子类会继承父类所有的publicl类型的实例变量和方法，但不会继承父类所有的private类型的变量和方法
-
-
-继承的意义
-
-
-1.避免了重复的程序代码2.定义出了共同的协议
-
-
-覆盖的规则
-
-
-1.参数必须一样，且返回类型必须兼容2.不能降低方法的存取权限
-
-
-super关键字
-
-多态
-
-
-
-运行多态时，引用类型可以是实际类型的父类
-
-
-方法的重载
-
-
-重载的意义是两个方法的名称相同，但参...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/04/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2014/04/06/Head-First-Java读书笔记-六-——认识Java的API/">
-            
-                <span>Head First Java读书笔记(六)——认识Java的API</span>
-        </a>
-        <div class="abstract-content">
-            
-ArrayList
-123456789101112131415161718class ArrayList&#123;    //向list中加入对象参数      add(Object o)      //在索引参数中移除对象     remove(int index)     //移除对象     remove(Object o)     //如果和对象参数匹配返回true    contains(Object o)    //如果list中没有元素返回true    isEmpty()    //返回对象参数的索引或-1    indexOf(Object o)    //返回li...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/04/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2014/04/05/Head-First-Java读书笔记-五-——编写程序/">
-            
-                <span>Head First Java读书笔记(五)——编写程序</span>
-        </a>
-        <div class="abstract-content">
-            
-编写过程
-
-
-1.找出类应该做的事情2.列出实例变量和方法3.编写方法的伪代码4.编写方法的测试用程序5.实现类6.测试方法7.除错或重新设计
-
-
-极限编程(XP)
-
-
-1.多次经常性的小规模发布2.避免加入规格没有的功能3.先编写测试用的程序4.正常工作上下班5.随时随地重构6.保持简单7.结对编程  
-
-
-前置与后置的递增、递减操作符
-
-
-x++ 等同于 x=x+1x-- 等同与 x=x-1
-
-
-加强版的for循环
-
-123for(String name:nameArray)&#123;&#125;
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/04/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Head First Java">Head First Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="读书笔记">读书笔记</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="杂七杂八">杂七杂八</a>
     
 </div>
             
@@ -830,11 +392,92 @@ x++ 等同于 x=x+1x-- 等同与 x=x-1
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2014/page/2/">2</a><a class="extend next" rel="next" href="/archives/2014/page/2/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/page/2/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
     </nav>
     
 </main>
             <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" alt="avatar" src="/avatar/jojo.png">
+    <div class="profile-name">laokamo</div>
+    
+    <div class="profile-signature">
+        under pressure
+    </div>
+    
+    
+    <div class="profile-social">
+        
+    
+        
+            
+                <a href="mailto:578144621@qq.com" class="iconfont-archer email" title="email"></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/laokamo" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title="wechat">
+                  
+                  <img class="profile-qr" src="/assets/qr.png">
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    
+        <div class="friends">
+            <div>FRIENDS</div>
+            
+                
+            
+        </div>
+    
+    
+</div>
             
         </div>
         <footer class="footer footer-unloaded">
